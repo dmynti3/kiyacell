@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet"  href="login.css">
+  <script type="text/javascript">
+
+  //fungsi untuk validasi login
+  function validasi(){
+    var username = document.forms["tara"]["username"].value;
+    var password = document.forms["tara"]["password"].value;
+    if( username == "kiyacell" && password == "123"){
+        //pengkondisian username=kiyacell dan password=123
+  if(username=="kiyacell"&& password == "123"==true){
+    window.location="beranda.html"; //jika login berhasil maka akan menuju ke halaman index.html (beranda konter)
+  }
+}
+    else if(username =="" || password ==""){
+      alert("Masukan username dan password Anda");
+      return false;
+    }
+    else{
+        //nilai variabel salah akan ditampilkan seperti ini
+      alert("Username atau password salah breee"); //jika username dan password salah
+      return false;
+    }
+  }
+
+ </script>
+ </html>
+<body>
+</head>
+<body>
+
+  <form class="box" action="beranda.html" method="get" id="tara" onsubmit=" return validasi()"> 
+    <p>Kiya Cell</p>
+    
+    <center><img src="01.png" width="100px" height="100px"></center>
+    <input type="username" name="username" placeholder="username">
+   <input type="password" name="password" placeholder="password">
+   <td colspan="2" >
+        <input class="login" type="submit" name="submit" value="login" >
+
+      <input type="reset" value="Reset">
+  </form>
+</body>
+</script>
+</html>
